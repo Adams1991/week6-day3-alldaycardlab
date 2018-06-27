@@ -32,7 +32,7 @@ public class Deck {
     }
 
     public void shuffleDeck(){
-        Collections.shuffle(deck, new Random(1));
+        Collections.shuffle(deck);
     }
 
 

@@ -5,7 +5,7 @@ public class Game {
     private Deck deck;
     private ArrayList<Player> player;
 
-    public Game(Deck deck){
+    public Game(){
         this.deck = new Deck();
         this.player =  new ArrayList<>();
 
@@ -13,9 +13,9 @@ public class Game {
 
 
     public void dealCard() {
-        this.deck.shuffleDeck();
         for (Player player  : this.player) {
-            Card card = this.deck.removeCard();
+            deck.shuffleDeck();
+            Card card = deck.removeCard();
             player.addCard(card);
         }
     }
@@ -37,10 +37,14 @@ public class Game {
         String winner = "";
         for (Player player1 :  this.player){
             for (Player player2 : this.player)
-            if (player1.showHandValue() > player2.showHandValue())
+                if (player1.showHandValue() > player2.showHandValue())
                 winner = player1.getName();
         }
-        return winner;
+        return winner + " Wins";
     }
+
+
+
+
 }
 

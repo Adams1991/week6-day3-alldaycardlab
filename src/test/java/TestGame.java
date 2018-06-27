@@ -7,6 +7,8 @@ public class TestGame {
 
     Player player1;
     Player player2;
+    Player player3;
+    Player player4;
     Deck deck;
     Game game;
 
@@ -15,8 +17,10 @@ public class TestGame {
     public void setup(){
         player1 = new Player("Boab");
         player2 = new Player("Billy");
+        player3 = new Player("Baba");
+        player4 = new Player("Bobo");
         deck = new Deck();
-        game = new Game(deck);
+        game = new Game();
     }
 
     @Test
@@ -37,8 +41,10 @@ public class TestGame {
     public void canCompareHands(){
         game.addPlayer(player1);
         game.addPlayer(player2);
+        game.addPlayer(player4);
+        game.addPlayer(player3);
         game.dealCard();
-        assertEquals("Boab", game.CompareHands());
+        assertEquals("Bobo Wins", game.CompareHands());
     }
 
 
