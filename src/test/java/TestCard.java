@@ -14,13 +14,18 @@ public class TestCard {
     }
 
     @Test
-    public void canGetSuit () {
+    public void canGetSuit(){
         assertEquals(SuitType.HEARTS, card.getSuit());
     }
 
     @Test
-    public void canGetRank () {
+    public void canGetRank(){
         assertEquals(RankType.EIGHT, card.getRank());
+    }
+
+    @Test
+    public void canGetValueFromRank(){
+        assertEquals(8, card.getValueFromRank());
     }
 
 }
