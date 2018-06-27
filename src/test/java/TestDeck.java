@@ -15,20 +15,20 @@ public class TestDeck {
     }
 
     @Test
-    public void deckIsEmpty(){
-        assertEquals(0, deck.cardCount());
+    public void deckStartsFull(){
+        assertEquals(52, deck.cardCount());
     }
 
     @Test
     public void addCardToDeck(){
         deck.addCard(card);
-        assertEquals(1, deck.cardCount());
+        assertEquals(53, deck.cardCount());
     }
 
     @Test
     public void canFillDeck(){
         deck.fillDeck();
-        assertEquals(52, this.deck.cardCount());
+        assertEquals(104, this.deck.cardCount());
     }
 
     @Test
@@ -42,7 +42,7 @@ public class TestDeck {
     public void removeCardFromDeck(){
         deck.fillDeck();
         deck.removeCard();
-        assertEquals(51, this.deck.cardCount());
+        assertEquals( 103, this.deck.cardCount());
     }
 
 
