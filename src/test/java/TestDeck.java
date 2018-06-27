@@ -19,6 +19,12 @@ public class TestDeck {
         assertEquals(0, deck.cardCount());
     }
 
+    @Test
+    public void addCardToDeck(){
+        deck.addCard(card);
+        assertEquals(1, deck.cardCount());
+    }
+
 
 
 
