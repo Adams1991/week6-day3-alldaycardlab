@@ -25,6 +25,19 @@ public class TestDeck {
         assertEquals(1, deck.cardCount());
     }
 
+    @Test
+    public void canFillDeck(){
+        deck.fillDeck();
+        assertEquals(52, this.deck.cardCount());
+    }
+
+    @Test
+    public void checkValidCardsBeingAdded(){
+        deck.fillDeck();
+        assertEquals( SuitType.HEARTS, deck.getFirstCardSuit());
+        assertEquals( RankType.ACE, deck.getFirstCardRank());
+    }
+
 
 
 
