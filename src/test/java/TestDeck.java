@@ -32,10 +32,17 @@ public class TestDeck {
     }
 
     @Test
-    public void checkValidCardsBeingAdded(){
+    public void checkValidCardBeingAdded(){
         deck.fillDeck();
         assertEquals( SuitType.HEARTS, deck.getFirstCardSuit());
         assertEquals( RankType.ACE, deck.getFirstCardRank());
+    }
+
+    @Test
+    public void removeCardFromDeck(){
+        deck.fillDeck();
+        deck.removeCard();
+        assertEquals(51, this.deck.cardCount());
     }
 
 

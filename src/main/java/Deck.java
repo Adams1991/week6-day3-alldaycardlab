@@ -37,4 +37,8 @@ public class Deck {
         Card card = this.deck.get(0);
         return card.getRank();
     }
+
+    public Card removeCard() {
+        return this.deck.remove(0);
+    }
 }
