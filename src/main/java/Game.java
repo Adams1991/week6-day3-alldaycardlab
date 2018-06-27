@@ -1,20 +1,34 @@
+import java.util.ArrayList;
+
 public class Game {
 
     private Deck deck;
-    private Player player;
+    private ArrayList<Player> player;
 
-    public Game(Deck deck, Player player){
-        this.deck = deck;
-        this.player = player;
+    public Game(Deck deck){
+        this.deck = new Deck();
+        this.player =  new ArrayList<>();
 
     }
 
 
     public void dealCard() {
-        deck.fillDeck();
-        Card card = this.deck.removeCard();
-        player.addCard(card);
+        this.deck.shuffleDeck();
+        for (Player player  : this.player) {
+            player.addCard(deck.removeCard());
+        }
+    }
 
+    public Deck getDeck(){
+        return this.deck;
+    }
+
+    public int playerCount() {
+        return this.player.size();
+    }
+
+    public void addPlayer(Player player) {
+        this.player.add(player);
     }
 }
 
