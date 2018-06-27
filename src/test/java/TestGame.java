@@ -44,7 +44,7 @@ public class TestGame {
         game.addPlayer(player4);
         game.addPlayer(player3);
         game.dealCard();
-        assertEquals("Bobo Wins", game.CompareHands());
+        assertEquals("Baba Wins", game.CompareHands());
     }
 
 
