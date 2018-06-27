@@ -29,6 +29,13 @@ public class TestPlayer {
     }
 
     @Test
+    public void canGetName(){
+        assertEquals("Chreun", player.getName());
+    }
+
+
+
+    @Test
     public void removeCardFromHand(){
         deck.fillDeck();
         card = deck.removeCard();

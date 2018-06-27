@@ -35,7 +35,9 @@ public class TestGame {
 //    @Test
 //    public void canCompareHands(){
 //        game.addPlayer(player1);
+//        game.addPlayer(player2);
 //        game.dealCard();
+//        assertEquals(, game.;
 //    }
 
 

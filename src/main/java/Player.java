@@ -31,4 +31,7 @@ public class Player {
         return handtotal;
     }
 
+    public String getName() {
+        return name;
+    }
 }
