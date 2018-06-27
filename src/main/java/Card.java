@@ -9,9 +9,7 @@ public class Card {
     }
 
 
-
-
-
-
-
+    public SuitType getSuit() {
+        return this.suit;
+    }
 }
