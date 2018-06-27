@@ -28,6 +28,23 @@ public class TestPlayer {
         assertEquals(1, player.cardCount());
     }
 
+    @Test
+    public void removeCardFromHand(){
+        deck.fillDeck();
+        card = deck.removeCard();
+        player.addCard(card);
+        player.removeCard();
+        assertEquals(0, player.cardCount());
+    }
+
+    @Test
+    public void canShowHandValue(){
+        deck.fillDeck();
+        card = deck.removeCard();
+        player.addCard(card);
+        assertEquals(1,  player.showHandValue());
+    }
+
 
 
 

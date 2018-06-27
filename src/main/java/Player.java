@@ -5,7 +5,7 @@ public class Player {
     private ArrayList<Card> hand;
     private String name;
 
-    public Player(String name){
+    public Player(String name) {
         this.hand = new ArrayList<>();
         this.name = name;
     }
@@ -18,4 +18,17 @@ public class Player {
     public void addCard(Card card) {
         this.hand.add(card);
     }
+
+    public Card removeCard() {
+        return this.hand.remove(0);
+    }
+
+    public int showHandValue() {
+        int handtotal = 0;
+        for (Card card : this.hand) {
+            handtotal += card.getValueFromRank();
+        }
+        return handtotal;
+    }
+
 }
