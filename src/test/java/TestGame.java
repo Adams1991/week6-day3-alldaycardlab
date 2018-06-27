@@ -14,7 +14,7 @@ public class TestGame {
     @Before
     public void setup(){
         player1 = new Player("Boab");
-        player1 = new Player("Billy");
+        player2 = new Player("Billy");
         deck = new Deck();
         game = new Game(deck);
     }
@@ -28,17 +28,18 @@ public class TestGame {
     @Test
     public void canDealCard(){
         game.addPlayer(player1);
+        game.addPlayer(player2);
         game.dealCard();
-        assertEquals(51, game.getDeck().cardCount());
+        assertEquals(50, game.getDeck().cardCount());
     }
 
-//    @Test
-//    public void canCompareHands(){
-//        game.addPlayer(player1);
-//        game.addPlayer(player2);
-//        game.dealCard();
-//        assertEquals(, game.;
-//    }
+    @Test
+    public void canCompareHands(){
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.dealCard();
+        assertEquals("Boab", game.CompareHands());
+    }
 
 
 }

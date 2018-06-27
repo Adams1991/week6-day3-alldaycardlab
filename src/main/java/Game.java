@@ -15,7 +15,8 @@ public class Game {
     public void dealCard() {
         this.deck.shuffleDeck();
         for (Player player  : this.player) {
-            player.addCard(deck.removeCard());
+            Card card = this.deck.removeCard();
+            player.addCard(card);
         }
     }
 
@@ -29,6 +30,17 @@ public class Game {
 
     public void addPlayer(Player player) {
         this.player.add(player);
+    }
+
+
+    public String CompareHands() {
+        String winner = "";
+        for (Player player1 :  this.player){
+            for (Player player2 : this.player)
+            if (player1.showHandValue() > player2.showHandValue())
+                winner = player1.getName();
+        }
+        return winner;
     }
 }
 
