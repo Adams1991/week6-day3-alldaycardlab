@@ -18,4 +18,9 @@ public class TestCard {
         assertEquals(SuitType.HEARTS, card.getSuit());
     }
 
+    @Test
+    public void canGetRank () {
+        assertEquals(RankType.EIGHT, card.getRank());
+    }
+
 }
